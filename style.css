@@ -1,0 +1,63 @@
+
+        /* New Color Palette */
+        :root {
+            --black: #000000;
+            --ebony: #616168;
+            --gray: #d3caca;
+            --pewter: #d0bac6;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--black);
+            color: var(--pewter);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--pewter);
+        }
+        .accent-color {
+            color: var(--pewter); /* Using Pewter as the main accent */
+        }
+        .secondary-text {
+            color: var(--gray);
+        }
+        .header-bg {
+            background-color: rgba(11, 9, 9, 0.85);
+            backdrop-filter: blur(10px);
+        }
+        .section-fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .section-fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .btn {
+            border: 1px solid var(--pewter);
+            color: var(--pewter);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: var(--pewter);
+            color: var(--black);
+        }
+        .project-card, .cert-card {
+            background-color: var(--ebony);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover, .cert-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(214, 214, 214, 0.1);
+        }
+        /* Typing animation styles */
+        .typing-cursor {
+            border-right: .10em solid var(--pewter);
+            animation: blink-caret .75s ;
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--pewter); }
+        }
